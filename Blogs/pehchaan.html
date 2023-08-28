@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poem Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .poem-title-bar {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .poem-title {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .teaser-video {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .poem-content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .poem-details {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .author-name {
+      color: #007bff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .similar-poems {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .poem-preview {
+      justify-content: space-between;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      margin-top: 2px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://murtuzabohra.github.io/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="poem-title-bar">
+      <h1 class="poem-title">Pehchaan</h1>
+    </div>
+
+
+    <div class="teaser-video">
+      <!-- Embed your YouTube video here as teaser -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/wXfImqaWoF0?si=u627rus8-Lw3eWuI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="poem-details">
+        <p>By: <span class="author-name" onclick="navigateToAuthorPage()">Murtuza Bohra</span></p>
+        <p>Date: Aug/2022</p>
+      </div>
+
+    
+    <div class="poem-content" id="english">
+        <table>
+            <tr>
+            Raasta mushkil na ho toh manzil kya<br>
+            Ghaav gehra na ho toh dard kya<br>
+            pyaas talab na ho toh shiddat kya<br>
+            Aur duniya m pehchan na ho toh zindagi kya<br>
+            </tr>
+            <br>
+            
+            <tr>
+            har shakhs ki pehchaan hai!<br>
+            kisi ka naam hai<br> 
+            kisi ki zaat hai<br>
+            aur kisi ki aukaat hai<br>
+            lekin jiski pehchaan hi uska kaam hai<br>
+            zamaane m ussi ki jai-jai kaar (lughat) hai<br>
+            </tr>
+            
+            <br>
+            <tr>
+            ek raaste pe nikale hai<br>
+            mushkilo ki bharmaar hai<br>
+            lakshya dur zaroor hai<br>
+            lekin hosla hamaare saath hai<br>
+            pohchenge manzil tak agar mazboot iraada, aur khud pe vishwaas hai<br>
+            </tr>
+            <br>
+
+            <tr>
+            kehte hai,<br>
+            kar yakeen khud pe toh khuda bhi tere saath hai,<br>
+            warna kisi k liye do waqt ki roti bhi badi baat hai<br>
+            </tr>
+    </table>
+    </div>
+
+
+    <div class="similar-poems">
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        Next
+      </div>
+      <!-- <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        <h3>Similar Poem 2</h3>
+        <p>Preview of similar poem 2...</p>
+      </div>
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        <h3>Similar Poem 3</h3>
+        <p>Preview of similar poem 3...</p>
+      </div> -->
+      <!-- Add more similar poem previews as needed -->
+    </div>
+  </div>
+
+  <script>
+
+    function navigateToAuthorPage() {
+      // Replace with actual link to author's page
+      window.location.href = 'https://murtuzabohra.github.io/';
+    }
+
+    function navigateToSimilarPoem() {
+      // Replace with actual link to similar poem's page
+      window.location.href = 'https://murtuzabohra.github.io/Blogs/Shikaayat.html';
+    }
+  </script>
+
+</body>
+</html>

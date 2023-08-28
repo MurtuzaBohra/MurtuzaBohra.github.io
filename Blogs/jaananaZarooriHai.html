@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poem Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .poem-title-bar {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .poem-title {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .teaser-video {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .poem-content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .poem-details {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .author-name {
+      color: #007bff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .similar-poems {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .poem-preview {
+      justify-content: space-between;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      margin-top: 2px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://murtuzabohra.github.io/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="poem-title-bar">
+      <h1 class="poem-title">Jaanana Zaroori Hai</h1>
+    </div>
+
+
+    <div class="teaser-video">
+      <!-- Embed your YouTube video here as teaser -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FTGu8UtPCVM?si=Dn4piRcnIr2Jg0jx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="poem-details">
+        <p>Author: <span class="author-name" onclick="navigateToAuthorPage()">Murtuza Bohra</span></p>
+        <p>Date: Oct/2020</p>
+      </div>
+
+    
+    <div class="poem-content" id="english">
+        <table>
+            Kiska dosh tha, jaanana zaroori hai!!<br>
+            <br>
+
+            <tr>
+            Jab wo paida hui, parivaar tha uska, lekin fir bhi paraayi thi,<br>
+            Jab padhna chahti thi, khelna chahti thi, khul kar jeena chahti thi,<br>
+            Rok diya usko, daant diya, kyu ki ladki thi wo, aur ek uski hadd thi,<br>
+            </tr>
+            <br>
+            
+            Kon banata hai yeh hadd jaanana zaroori hai!!<br>
+
+            <br>
+            <tr>
+            Ladka hua, ghar bhi tha parivaar bhi, aur koi hadd bhi naa thi,<br>
+            Khelta tha wo, ghumta tha dosto k saath, kiseeko parwah naa thi,<br>
+            Kiseene puchha tak nahi kaha tha raat bhar, lekin maa uski pareshaan thi,<br>
+            </tr>
+            
+            <br>
+            Kiski beparwaahi thi jaanana zaroori hai!!<br>
+            <br>
+            
+            <tr>
+            Ek din galti se nikal gayi apni hadd se bahar ki duniya mei, akeli thi,<br>
+            Gahri saans li usne, dekh rahi thi idhar udhar, aur khush thi,<br>
+            Ek jhund n dekha usko, wo toh anjaan thi, akeli thi, kya kar sakti thi,<br>
+            </tr>
+            
+            <br>
+            Kiska jhund tha wo, jaanana zaroori hai!!<br>
+            <br>
+            
+            <tr>
+            Dhund raha parivaar uska, puchhna hai sawaal usse kyu gai kaha gayi.<br>
+            Dusri taraf, Ladka hai nahi aaya abhi tak, dosto k saath hoga, kiseeko koi sawal nahi,<br>
+            Jab mili wo, khamosh thi, zabaan kati hui, shareer pe usk kapdo se zyada chot thi,<br>
+            </tr>
+            
+            <br>
+            Kon hadd mei tha aur Kisne hadd paar ki jaanana zaroori hai!!<br>
+            <br>
+            
+            <tr>
+            Galti toh thi, Sarkaar ki, samaaj ki, sanskaar ki yaa parivaar ki,<br>
+            Kiska dosh tha, jaanana zaroori hai....<br>
+            </tr>
+    </table>
+    </div>
+
+
+    <div class="similar-poems">
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        Next
+      </div>
+      <!-- <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        <h3>Similar Poem 2</h3>
+        <p>Preview of similar poem 2...</p>
+      </div>
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        <h3>Similar Poem 3</h3>
+        <p>Preview of similar poem 3...</p>
+      </div> -->
+      <!-- Add more similar poem previews as needed -->
+    </div>
+  </div>
+
+  <script>
+
+    function navigateToAuthorPage() {
+      // Replace with actual link to author's page
+      window.location.href = 'https://murtuzabohra.github.io/';
+    }
+
+    function navigateToSimilarPoem() {
+      // Replace with actual link to similar poem's page
+      window.location.href = 'https://murtuzabohra.github.io/Blogs/pehchaan.html';
+    }
+  </script>
+
+</body>
+</html>

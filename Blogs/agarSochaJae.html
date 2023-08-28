@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poem: Agar Socha Jae</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .poem-title-bar {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .poem-title {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .teaser-video {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .poem-content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .poem-details {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .author-name {
+      color: #007bff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .similar-poems {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .poem-preview {
+      justify-content: space-between;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      margin-top: 2px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://murtuzabohra.github.io/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="poem-title-bar">
+      <h1 class="poem-title">Agar Socha Jae...</h1>
+    </div>
+
+
+    <div class="teaser-video">
+      <!-- Embed your YouTube video here as teaser -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TDLOlmpDoj4?si=tSfoE-E5P1thOHYj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="poem-details">
+        <p>By: <span class="author-name" onclick="navigateToAuthorPage()">Murtuza Bohra</span></p>
+        <p>Date: Sept/2020</p>
+      </div>
+
+    
+    <div class="poem-content" id="english">
+    <table>
+        <tr>
+        Agar har khuab pura ho jae,<br>
+        Toh khuab aur hakeekat m fark hi kya reh jae,<br>
+        Agar jise chaaha wahi chhut jae,<br>
+        Toh dil ka jism se rishta hi kya reh jae.
+        </tr>
+        <br>
+
+        <tr>
+        Agar ishq haalat se ladne ko bebas ho jae,<br>
+        Toh dilo k rishte aur bhi mazboot ho jae,<br>
+        Agar samaajik deeware khatam ho jae,<br>
+        Toh bekhof mohabbat karna mumkeen ho jae
+        </tr>
+        <br>
+
+        <tr>
+        Agar jiska saath chaha tha wo mil jae,<br>
+        Toh zindagi bhar ka safar, mano chand palo mei simat jaae<br>
+        Agar har adhuri khwahish puri ho jae,<br>
+        Toh zindagi jeene ka maksad hi kya reh jae,
+        </tr>
+        <br>
+
+        <tr>
+        Agar madad karna ibaadat bann jae,<br>
+        Toh har majboor laachar bebas ko sahara mil jae,<br>
+        Agar har koi insaan bann jae,<br>
+        Toh sabhi unch nich k vivaad khatam ho jae.
+        </tr>
+        <br>
+
+        <tr>
+        Agar socha hai ki kuchh haasil karliya jae,<br>
+        Toh zindagi sirf sochte hue na beet jae,<br>
+        Agar koshish karne mei thodi bhi chuk reh jae,<br>
+        Toh marte samay tak yeh afsoos na reh jae.
+        </tr>
+    </table>
+
+    </div>
+
+
+    <div class="similar-poems">
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        Next
+      </div>
+      <!-- <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        <h3>Similar Poem 2</h3>
+        <p>Preview of similar poem 2...</p>
+      </div>
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        <h3>Similar Poem 3</h3>
+        <p>Preview of similar poem 3...</p>
+      </div> -->
+      <!-- Add more similar poem previews as needed -->
+    </div>
+  </div>
+
+  <script>
+
+    function navigateToAuthorPage() {
+      // Replace with actual link to author's page
+      window.location.href = 'https://murtuzabohra.github.io/';
+    }
+
+    function navigateToSimilarPoem() {
+      // Replace with actual link to similar poem's page
+      window.location.href = 'https://murtuzabohra.github.io/Blogs/sochtaKyuHuMai.html';
+    }
+  </script>
+
+</body>
+</html>

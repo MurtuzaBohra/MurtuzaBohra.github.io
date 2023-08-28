@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poem Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .poem-title-bar {
+      background-color: #f9f9f9;
+      padding: 10px;
+      text-align: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .poem-title {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .teaser-video {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .poem-content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .poem-details {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .author-name {
+      color: #007bff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .similar-poems {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .poem-preview {
+      justify-content: space-between;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      margin-top: 2px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="https://murtuzabohra.github.io/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="poem-title-bar">
+      <h1 class="poem-title">Shikaayat</h1>
+    </div>
+
+    <div class="poem-details">
+        <p>By: <span class="author-name" onclick="navigateToAuthorPage()">Murtuza Bohra</span></p>
+      </div>
+
+    
+    <div class="poem-content" id="english">
+        <table>
+            <tr>
+                Puchhta hu sabko ek mazhab kyu chunna hai.<br><br>
+                Agar rab chahta hai insaan ibaadat kare,<br><br>
+                toh ibaadat na karne ki wajah kyu deta hai.<br><br>
+                Uska rab lag mera alag to mohabbat ki ijazat kyu deta hai<br><br>
+                Aur agar ijazat di hai to usse anjaam kyu nahi deta hai.<br><br>
+                Shikaayat hai mujhe rab se, mujhe meri mohabbat kyu nahi deta hai.<br><br>
+            </tr>
+    </table>
+    </div>
+
+
+    <!-- <div class="similar-poems">
+      <div class="poem-preview" onclick="navigateToSimilarPoem()">
+        Next
+      </div>
+    </div> -->
+  </div>
+
+  <script>
+
+    function navigateToAuthorPage() {
+      // Replace with actual link to author's page
+      window.location.href = 'https://murtuzabohra.github.io/';
+    }
+
+    function navigateToSimilarPoem() {
+      // Replace with actual link to similar poem's page
+      window.location.href = 'similar-poem.html';
+    }
+  </script>
+
+</body>
+</html>
