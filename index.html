@@ -1,195 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Murtuza Bohra, Personal Page, Applied Scientist, Machine Learning, Computer Vision, AI">
+  <meta name="description" content="Murtuza Bohra - Applied Scientist specializing in Machine Learning, Computer Vision, and Optimization">
+  <title>Murtuza Bohra - Applied Scientist & ML Engineer</title>
+  <link rel="icon" type="image/png" href="./Images/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --text-light: #9ca3af;
+      --background: #ffffff;
+      --surface: #f8fafc;
+      --border: #e5e7eb;
+      --border-light: #f3f4f6;
+      --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--background);
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 8rem 0 4rem;
+      background: linear-gradient(135deg, var(--surface) 0%, var(--background) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -0%;
+      width: 100%;
+      height: 100%;
+      background-image: url('./Images/BunbuniPass.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+      z-index: 0;
+      transform: rotate(-15deg);
+    } */
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-text .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .hero-text .description {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: white;
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary-color);
+      border-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      gap: 0.5rem;
+    }
+
+    .social-link:hover {
+      background: var(--primary-color);
+      color: white;
+      border-color: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary-color);
+      box-shadow: var(--shadow-lg);
+    }
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="“width=800”">
-  <meta name="keywords" content="Murtuza Bohra, Personal Page, Applied Scientist, Machine Learning">
-  <style type="text/css">
-    a {
-    color: #1772d0;
-    text-decoration:none;
+
+    /* Section Styles */
+    section {
+      padding: 4rem 0;
     }
-    a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
     }
-    body,td,th,tr,p,a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
     }
-    strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
     }
-    heading {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
     }
-    papertitle {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700
+
+    .skills-overview {
+      background: var(--surface);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid var(--border-light);
     }
-    name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 32px;
+
+    .skills-overview h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
     }
-    .one
-    {
-    width: 160px;
-    height: 160px;
-    position: relative;
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-    .two
-    {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
+
+    .skill-tag {
+      background: var(--primary-color);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
-    .fade {
-     transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
-     -webkit-transition: opacity .2s ease-in-out;
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
     }
-    span.highlight {
-        background-color: #ffffd0;
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--background);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-light);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .project-description {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .project-link:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Experience Section */
+    .experience-section {
+      background: var(--surface);
+    }
+
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--primary-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 5rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 21px;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      border: 3px solid var(--background);
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-content {
+      background: var(--background);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-light);
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-description {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      text-align: center;
+      padding: 2rem;
+      background: var(--background);
+      border-radius: 1rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-light);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .contact-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--text-primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    /* Scroll to top button */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow-lg);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    .scroll-top.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero::before {
+        display: none;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-image img {
+        width: 200px;
+        height: 200px;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+
+
+      .cta-buttons,
+      .social-links {
+        justify-content: center;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .timeline::before {
+        left: 15px;
+      }
+
+      .timeline-dot {
+        left: 6px;
+      }
+
+      .timeline-item {
+        padding-left: 3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 6rem 0 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
     }
   </style>
-  <link rel="icon" type="image/png" href="./Images/icon.png">
-  <title>Murtuza Bohra</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tbody><tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tbody>
-        <tr>
-          <img width=90% align="center" src="./Images/BunbuniPass.jpg">
-          <p> Mountains are beatiful. This was captured at the Bunbuni pass (peak), Parvati Valley, Himachal, India.</p>
-        </tr>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="nav-container">
+        <a href="#home" class="logo">Murtuza Bohra</a>
+        <ul class="nav-links">
+          <!-- <li><a href="#home">Home</a></li> -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-        <tr>
-        <td width="67%" valign="middle">
-        <p align="center">
-          <name>Murtuza Bohra</name>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <!-- <h1>Murtuza Bohra</h1> -->
+          <h1>Applied Scientist & AI Researcher</h1>
+          <!-- <p class="subtitle">Applied Scientist & AI Researcher</p> -->
+          <p class="description">
+            My work interests are Machine Learning, Computer Vision and Optimization. I write code that makes software intelligent, some people call it "Artificial Intelligence". I also enjoy the mathematical modeling of real life problems.
+          </p>
+          
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-eye"></i>
+              View My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/murtuza-bohra-2b2b36ba/" class="social-link">
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+            <a href="https://scholar.google.com/citations?user=It_4eKUAAAAJ&hl=en" class="social-link">
+              <i class="fas fa-graduation-cap"></i>
+              Scholar
+            </a>
+            <a href="https://twitter.com/murtuzabohra11?lang=en" class="social-link">
+              <i class="fab fa-twitter"></i>
+              Twitter
+            </a>
+            <a href="./Blogs/index.html" class="social-link">
+              <i class="fas fa-blog"></i>
+              Blog
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="./Images/profile_avatar.png" alt="Murtuza Bohra">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+          Passionate about creating intelligent systems that solve real-world problems
         </p>
-        <p align="justify">My work interests are Machine Learning, Computer Vision and Optimization. I write code that makes software intelligent, some people call it "Artificial Intelligence". I also enjoy the mathematical modeling of real life problem. I am currently working with an visual AI startup to build an smart sketching tool with AI assistance. What now seems like aeons ago, I completed my Master's from <a href="http://iiit.ac.in/">IIIT Hyderabad</a> and B.Tech from <a href="http://iiitv.ac.in/">IIIT Vadodara</a>. Please feel free to connect, if you have an interesting problem to discuss and brainstorm. </p>
-      	<p>
-      <!--	In my free time, I love to do cycling and play badminton. -->
-      	</p>
-        <p align=center>
-          <!-- <a href="./Files/Curriculum_Vitae.pdf">CV</a> &nbsp/&nbsp -->
-          <a href="https://www.linkedin.com/in/murtuza-bohra-2b2b36ba/"> LinkedIn </a> &nbsp/&nbsp
-          <a href="https://twitter.com/murtuzabohra11?lang=en"> Twitter </a> &nbsp/&nbsp
-          <a href="https://scholar.google.com/citations?user=It_4eKUAAAAJ&hl=en">Scholar</a> &nbsp/&nbsp
-          <a href="./Blogs/index.html"> Blog </a>
+      </div>
+      
+      <div class="about-content">
+        <div class="skills-overview">
+          <h3>Technical Expertise</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">AI</span>
+            <span class="skill-tag">Optimization</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Graph Theory</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+          </div>
+        </div>
+        
+        <div class="about-text">
+          <p>
+            I'm a passionate AI researcher with expertise in Machine Learning, Computer Vision, and Optimization. My journey began with a strong foundation in computer science from <a href="https://iiitvadodara.ac.in/" target="_blank" style="color: var(--primary-color); text-decoration: none;">IIIT Vadodara</a>, followed by an MS by Research from <a href="https://www.iiit.ac.in/" target="_blank" style="color: var(--primary-color); text-decoration: none;">IIIT Hyderabad</a>.
+          </p>
+          <p>
+            I love to work and collaborate on bridging the gap between cutting-edge research and practical applications.
+          </p>
+          <p>
+            Currently, I'm working at <a href="https://napkin.ai/" target="_blank" style="color: var(--primary-color); text-decoration: none;">Napkin AI</a> (a visual AI startup), leading the AI research to make the visual communication easier and more intuitive. Previously, I've had the privilege of working at Amazon as an Applied Scientist and conducting research at Microsoft Research Lab, India.
+          </p>
+          <p>
+            Please feel free to connect if you have an interesting problem to discuss and brainstorm solutions!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Experience & Education</h2>
+        <p class="section-subtitle">
+          My professional journey and academic background
         </p>
-        </td>
-        <td width="40%">
-        <img width=65% src="./Images/profile_avatar.png" align="left">
-        </td>
-      </tr>
-      </tbody></table>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Mar 2022 - Present</div>
+            <div class="timeline-title">Applied Researcher - Napkin AI</div>
+            <div class="timeline-description">
+              Building Napkin's AI to make visual communication easier and more intuitive. Leading AI research for understanding user prompt, generating visuals and ranking them for business storytelling.
+            </div>
+          </div>
+        </div>
 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">May 2020 - Feb 2022</div>
+            <div class="timeline-title">Applied Scientist - Amazon</div>
+            <div class="timeline-description">
+              Worked with Amazon Catalogue and Selection Monitoring (ASCS) team. Developed a fully automatic technique for information extraction from web-documents, focusing on semi-structured documents where layout and structure play important roles. Used computer vision and deep language models for structured information extraction.
+            </div>
+          </div>
+        </div>
 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Sept 2019 - Feb 2020</div>
+            <div class="timeline-title">Research Intern - Microsoft Research Lab, India</div>
+            <div class="timeline-description">
+              Worked on problems at the confluence of computer vision and healthcare. Project focused on detection of Keratoconus (eye disease) using smartphone camera technology.
+            </div>
+          </div>
+        </div>
 
-<h2>News & Updates</h2>
-<div style="overflow-y: auto; height:150px; ">
-  <ul>
-    <li><b> Oct-2021:</b> Presented Paper in Amazon Machine Learning Conference (AMLC'21).</li>
-    <li><b> May-2020:</b> Joined Amazon.com as Applied Sceientist.</li>
-    <li><b> April-2020:</b> Paper accepted in Graphics Interface (GI'20).</li>
-    <li><b> Feb-2020:</b> Paper accepted in SIVP Journal.</li>
-    <li><b> Sept-2019:</b> Joined Microsoft Research Lab, India as Research Intern for 6 months.</li>
-    <li><b> June-2018:</b> Joined as part-time mentor for AIML program offered by IIIT-H and TalentSprint.</li>
-    <li><b> July-2017:</b> Joined MS by Research in Computer Science at IIIT, Hyderabad.</li>
-    <li><b> June-2017:</b> Graduated as B.Tech. in Computer Science and Engineering from IIIT, Vadodara.</li>
-    <li><b> Jan-2017:</b> Joined as cloud deployment engineer intern at Searce Inc. for 6 months.</li>
-    <li><b> May-June,2016:</b> Joined two-month internship at Tata Consultancy Services(TCS).</li>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">June 2018 - Mar 2020</div>
+            <div class="timeline-title">AI/ML Program Mentor - TalentSprint</div>
+            <div class="timeline-description">
+              Worked as program mentor and tutor for AI/ML training program. Mentoring students in machine learning and AI concepts - learning by teaching.
+            </div>
+          </div>
+        </div>
 
-  </ul>
-</div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">July 2017 - Sept 2019</div>
+            <div class="timeline-title">MS by Research - IIIT Hyderabad</div>
+            <div class="timeline-description">
+              Research assistant at CVIT-lab under Prof. Vineet Gandhi. Completed MS thesis with two successful research projects resulting in scientific publications. Also served as Teaching Assistant for Statistical Methods in AI (SMAI) course.
+            </div>
+          </div>
+        </div>
 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jan 2017 - June 2017</div>
+            <div class="timeline-title">Cloud Solution Deployment Engineer Intern - Searce Inc</div>
+            <div class="timeline-description">
+              6-month internship working on cloud solution deployment and engineering projects.
+            </div>
+          </div>
+        </div>
 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2013 - 2017</div>
+            <div class="timeline-title">B.Tech Computer Science - IIIT Vadodara</div>
+            <div class="timeline-description">
+              Bachelor's degree in Computer Science and Engineering. Part of the first batch of IIIT-Vadodara. Served as Head of Mess Committee and was active in badminton. Also worked as Teaching Assistant for DBMS and Speech Science and Technology courses.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Research Projects</h2>
+        <p class="section-subtitle">
+          A selection of research projects published during my academic and professional career
+        </p>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="./Images/TextureToMTF.png" alt="TextureToMTF" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">TextureToMTF: Predicting Spatial Frequency Response In The Wild</h3>
+            <p class="project-description">
+              Having a good smartphone camera doesn't always guarantee that the images captured with it will have good quality. This research focuses on predicting spatial frequency response from texture patterns in natural images.
+            </p>
+            <a href="https://murtuzabohra.github.io/TextureToMTF/" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+          </div>
+        </div>
 
+        <div class="project-card">
+          <img src="./Images/ColorArt.png" alt="ColorArt" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">ColorArt: Suggesting Colorizations of Graphic Arts Using Optimal Color-Graph Matching</h3>
+            <p class="project-description">
+              Graphics designs are visually appealing only when they are colored appropriately. This is a fully automatic colorization algorithm for graphic patterns using optimal color-graph matching techniques.
+            </p>
+            <a href="https://murtuzabohra.github.io/ColorArt/" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+          </div>
+        </div>
 
-<br><br>
+        <div class="project-card">
+          <img src="./Images/smartKC.png" alt="SmartKC" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">SmartKC: Smartphone-based Corneal Topographer for Keratoconus Detection</h3>
+            <p class="project-description">
+              Keratoconus is a severe eye disease affecting the cornea, causing it to become thin and develop a conical bulge. SmartKC is a smartphone-based low-cost diagnostic tool for early detection.
+            </p>
+            <a href="https://arxiv.org/pdf/2111.01354.pdf" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Read Paper
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Publications </h2>
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tbody><tr>
-      <td width="35%" valign="middle">
-        <img width=100% src="./Images/TextureToMTF.png">
-      </td>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          I'm always interested in discussing exciting projects and opportunities
+        </p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <a href="https://www.linkedin.com/in/murtuza-bohra-2b2b36ba/" class="contact-link">
+            LinkedIn
+          </a>
+        </div>
 
-      <td width="70%" valign="middle">
-        <b> TextureToMTF: Predicting Spatial Frequency Response In The Wild </b> [<a href="https://murtuzabohra.github.io/TextureToMTF/">Link</a>] <br> <br>
-            Having a good smartphone camera, doesn't always guarantee that the images captured with it, will have a good quality.
-      </td>
-    </tr>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <a href="https://scholar.google.com/citations?user=It_4eKUAAAAJ&hl=en" class="contact-link">
+            Google Scholar
+          </a>
+        </div>
 
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <a href="https://twitter.com/murtuzabohra11?lang=en" class="contact-link">
+            Twitter
+          </a>
+        </div>
 
-    <tr>
-      <td width="35%" valign="middle">
-        <img width=100% src="./Images/ColorArt.png">
-      </td>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-blog"></i>
+          </div>
+          <a href="./Blogs/index.html" class="contact-link">
+            Personal Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <td width="70%" valign="middle">
-        <b> ColorArt: Suggesting Colorizations of Graphic Arts Using Optimal Color-Graph Matching </b> [<a href="https://murtuzabohra.github.io/ColorArt/">Link</a>] <br> <br>
-          Graphics designs are visually appealing only when they are colored appropriately. This is a fully automatic colorization algorithm for graphic patterns. 
-      </td>
-    </tr>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Murtuza Bohra. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <tr>
-      <td width="35%" valign="middle">
-        <img width=100% src="./Images/smartKC.png">
-      </td>
+  <!-- Scroll to top button -->
+  <button class="scroll-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-      <td width="70%" valign="middle">
-        <b> SmartKC: Smartphone-based Corneal Topographer for Keratoconus Detection </b> [<a href="https://arxiv.org/pdf/2111.01354.pdf">Link</a>] <br> <br>
-          Keratoconus is a severe eye disease affecting the cornea (the clear, dome-shaped outer surface of the eye), causing it to become thin and develop a conical bulge. SmartKC is a smart-phone based low cost diagnostic tool. 
-      </td>
-    </tr></tbody>
-  </table>
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
 
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', function() {
+      const scrollTop = document.querySelector('.scroll-top');
+      if (window.pageYOffset > 300) {
+        scrollTop.classList.add('show');
+      } else {
+        scrollTop.classList.remove('show');
+      }
+    });
 
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
 
+    // Add active class to navigation items on scroll
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
 
-	  
-<h2>Positions of Responsibility </h2>
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tbody><tr>
-        <td width="100%" valign="middle">
-
-      		<ul>
-      		<li>
-      		<b>2017-2018: </b> Member of Student Parliament of IIIT, Hyderabad.
-      		</li>
-      		</ul>
-
-
-      		<ul>
-      		<li>
-      		<b>2013-2015: </b> Head of student's mess committee at IIIT, Vadodara.
-      		</li>
-      		</ul>
-
-        </td>
-      </tr></tbody>
-  </table>
-  
-
-
-  </td>
-  </tr></tbody>
-</table>
-
-</body></html>
-
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
